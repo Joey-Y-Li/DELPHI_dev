@@ -42,7 +42,7 @@ mkdir -p ../programs && cd ../program
  sudo apt-get install ncbi-blast+
 ```
  
- - intall [hh-suite](https://github.com/soedinglab/hh-suite). Download the [database](http://wwwuser.gwdg.de/~compbiol/data/hhsuite/databases/hhsuite_dbs/old-releases/) used in DELPHI is uniprot20_2015_06.
+ - intall [hh-suite](https://github.com/soedinglab/hh-suite). The [database](http://wwwuser.gwdg.de/~compbiol/data/hhsuite/databases/hhsuite_dbs/old-releases/) used in DELPHI is uniprot20_2015_06.
  
  - intall [GENN+ASAquick](http://mamiris.com/software.html)
  
