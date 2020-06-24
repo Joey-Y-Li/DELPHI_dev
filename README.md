@@ -1,6 +1,6 @@
 # The source code of DELPHI web server
 # system requirement
-DELPHI is developed under Linux environment with python 3.5. It should be compatible with higher versions of python, but it is not guaranteed.
+DELPHI is developed under Linux environment with python 3.5.
 RAM: recommended: > 24GB. The RAM requirement depends on the length of the input sequence. 
 
 # installation
