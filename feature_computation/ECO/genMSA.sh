@@ -13,11 +13,10 @@ fi
 for file in ${inputpath}/*.fasta;
 do
 	echo  ${outpath}/"$(basename "$file")"
-	echo 'Checking'
 	if [ ! -f ${outpath}/"$(basename "$file")" ]; then
-		#echo $file $" has not been processed yet "
+		echo "ECO file for $file doesn't exist, running hhblits"
 		${hhblits} -i $file -ohhm ${outpath}/"$(basename "$file")"  -d ${database}  -hide_cons -hide_pred -hide_dssp -v 0  -neffmax 1 -n 1 -cpu 10
-	#else
-		#echo $file $" has already been processed "
+	else
+		echo "ECO file for $file exists, skip hhblits"
 	fi
 done

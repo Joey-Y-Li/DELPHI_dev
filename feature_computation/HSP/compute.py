@@ -85,23 +85,24 @@ def ReadHSP(HSP_fn, target_fn, out_fn):
                 for i in range(hsp_length):
                     position_train = sta_train + i
                     position_target = sta_target + i
-                    if (train_pid_2_label[p_train][position_train] == "1"):
-                        # print("is 1")
-                        # print("score: ", PAM120[(
-                        #         train_pid_2_seq[p_train][position_train],
-                        #         target_pid_2_seq[p_target][position_target])])
-                        # add score if similar, don't deduct score
-                        if((train_pid_2_seq[p_train][position_train],target_pid_2_seq[p_target][position_target]) in PAM120):
-                            score = PAM120[(
-                                train_pid_2_seq[p_train][position_train],
-                                target_pid_2_seq[p_target][position_target])]
-                        else:
-                            score = PAM120[(
-                                target_pid_2_seq[p_target][position_target],
-                                train_pid_2_seq[p_train][position_train])]
-                        target_pid_2_score[p_target][position_target] = max(score, 0) + target_pid_2_score[p_target][position_target]
-                        # max_value = max(max_value, target_pid_2_score[p_target][position_target])
-    # print("max value: ",max_value)
+                    if ((position_train < len(train_pid_2_label[p_train])) and (position_target < len(target_pid_2_seq[p_target])) and (train_pid_2_seq[p_train][position_train] != 'U') and (target_pid_2_seq[p_target][position_target] != 'U')):
+                        if (train_pid_2_label[p_train][position_train] == "1"):
+                            # print("is 1")
+                            # print("score: ", PAM120[(
+                            #         train_pid_2_seq[p_train][position_train],
+                            #         target_pid_2_seq[p_target][position_target])])
+                            # add score if similar, don't deduct score
+                            if((train_pid_2_seq[p_train][position_train],target_pid_2_seq[p_target][position_target]) in PAM120):
+                                score = PAM120[(
+                                    train_pid_2_seq[p_train][position_train],
+                                    target_pid_2_seq[p_target][position_target])]
+                            else:
+                                score = PAM120[(
+                                    target_pid_2_seq[p_target][position_target],
+                                    train_pid_2_seq[p_train][position_train])]
+                            target_pid_2_score[p_target][position_target] = max(score, 0) + target_pid_2_score[p_target][position_target]
+                            # max_value = max(max_value, target_pid_2_score[p_target][position_target])
+        # print("max value: ",max_value)
     fin.close()
 
     #normalize

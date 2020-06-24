@@ -29,6 +29,8 @@ T =0.05500
 V =0.07200
 W =0.01400
 Y =0.03400
+X =1
+U =1
 
 background  = [C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,T,V,W,Y,A]
 
@@ -53,7 +55,9 @@ backgrounddict ={
 'T' : 0.05500,
 'V' : 0.07200,
 'W' : 0.01400,
-'Y' : 0.03400
+'Y' : 0.03400,
+'X' : 1,
+'U' : 1
 }
 
 def readBlosumMatrix(path) :

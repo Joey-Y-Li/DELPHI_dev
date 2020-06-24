@@ -43,7 +43,7 @@ def extract_lines(pssmFile):
 
 
 def LoadPSSMandPrintFeature(pssm_fn, out_base_fn, Pid, line_Pseq):
-    # print(Pid)
+    print(Pid)
     global min_value, max_value
     fin = open(pssm_fn, "r")
     pssmLines=extract_lines(pssm_fn)

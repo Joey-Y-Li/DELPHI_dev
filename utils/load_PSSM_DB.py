@@ -120,11 +120,14 @@ def main():
         elif line[0] != '>':
             p_seq = line.rstrip("\n")
             if p_seq in dic_seq2_pssm_path:
+                print(pid," is in DELPHI's PSSM database, loading it")
                 cmd = "mkdir -p " + PSSM_raw_dir
                 os.system(cmd)
                 cmd = "cp " + dic_seq2_pssm_path[p_seq] + " " + PSSM_raw_dir + "/" + pid + ".fasta.pssm"
 
                 os.system(cmd)
+            else:
+                print(pid," is not in DELPHI's PSSM database, will compute it")
 
         
     # pssm_db_dir = sys.argv[1] # dir where PSSMs are

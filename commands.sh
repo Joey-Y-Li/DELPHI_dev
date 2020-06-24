@@ -31,5 +31,21 @@ python3 predict.py -i $INPUT_FN -d ${DS}_temp -o out_${DS} -c 1
 #run_ds DS_186 /home/j00492398/test_joey/interface-pred/Dataset/DS_186/DS_186_Pid_and_Pseq.txt
 #run_ds SCRIBER_test /home/j00492398/test_joey/interface-pred/Dataset/SCRIBER/SCRIBER_test_Pid_and_Pseq.txt
 
+# build db
 cd /work2/DELPHI_Server/PSSM_database/PSSMs
-python3 /work2/DELPHI_Server/Src/utils/build_PSSM_DB.py /work2/DELPHI_Server/PSSM_database/PSSMs/ out_dic
+python3 /work2/DELPHI_Server/Src/utils/build_PSSM_DB.py /work2/DELPHI_Server/PSSM_database/PSSMs/ 
+
+# performance evaluation
+python3 /work2/DELPHI_Server/Src/utils/performance_evaluation.py out_DS72 dataset/DS_72_Pid_Pseq_label.txt ds72_delphi_cpu_server
+
+
+
+
+
+
+
+
+
+
+
+

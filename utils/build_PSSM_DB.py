@@ -85,13 +85,19 @@ def get_sequence(pssm_fn):
     lines = fin.readlines()
     for line in lines:
         if re.match(r"^\ *\d+.*$",line):
-            AA = line.split()[1]
-            # print("AA: ",AA)
-            seq = seq + AA
-    fin.close
+            if (len(line.split())>20):
+                AA = line.split()[1]
+                # print("AA: ",AA)
+                seq = seq + AA
+            else:
+                cmd = "rm " + pssm_fn
+                print(cmd)
+                os.system(cmd)
+                return ""
+    fin.close()
     return seq.rstrip("\n")
 
-def load_DB(pssm_db_dir, output_dic_fn):
+def load_DB(pssm_db_dir):
     print("loading PSSM DB..")
     dic_seq2_pssm_path = {}
     for file in os.listdir(pssm_db_dir):
@@ -102,19 +108,16 @@ def load_DB(pssm_db_dir, output_dic_fn):
             seq = get_sequence(abspath)
             # print (seq)
             dic_seq2_pssm_path[seq] = abspath
-    print("Writing DB to json file")
+    print("Writing DB to json file /work2/DELPHI_Server/PSSM_database/PSSM_dic_seq2_pssm_path.json")
     with open('/work2/DELPHI_Server/PSSM_database/PSSM_dic_seq2_pssm_path.json', 'w') as fp:
         json.dump(dic_seq2_pssm_path, fp)
 
+
 def main():
     pssm_db_dir = sys.argv[1] # dir where PSSMs are
-    output_dic_fn= sys.argv[2] # output fn of a python dictionary {seq, pssm_path}
-    load_DB(pssm_db_dir, output_dic_fn)
-    # print("max_value: ", max_value)
-    # print("min_value: ", min_value)
+    # output_dic_fn= sys.argv[2] # output fn of a python dictionary {seq, pssm_path}
+    load_DB(pssm_db_dir)
 
-max_value = 13.0
-min_value = -16.0
 if __name__ == '__main__':
     main()
 
