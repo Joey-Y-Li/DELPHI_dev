@@ -2,7 +2,7 @@
 The DELPHI source code is designed for high-throughput prediction. It does not have the limitation of 10 sequences per run. We recommend to use the [web version](https://www.csd.uwo.ca/~yli922/index.php) of DELPHI if you input is small.
 # system requirement
 DELPHI is developed under Linux environment with python 3.5.
-RAM: recommended: > 24GB. The RAM requirement depends on the length of the input sequence. 
+Recommended RAM: > 24GB. The RAM requirement mainly depends on the length of the input sequence. 
 
 # installation
 1. clone the source code of DELPHI
