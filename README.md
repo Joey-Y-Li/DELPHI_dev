@@ -31,7 +31,7 @@ mkdir -p ../programs && cd ../program
 
  - install [SPRINT](https://github.com/lucian-ilie/SPRINT)
  ```
- git clone git@github.com:yiweili/DELPHI_web_server.git
+ git clone git@github.com:lucian-ilie/SPRINT.git
  git checkout DELPHI_Server
  make compute_HSPs_parallel
  ```
