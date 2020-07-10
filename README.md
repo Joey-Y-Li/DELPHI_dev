@@ -48,3 +48,20 @@ mkdir -p ../programs && cd ../program
  
  - install [ANCHOR](http://anchor.elte.hu/Downloads.php)
  
+4. Modify the `env_setup.sh`. Change the path according to your environment.
+
+5. To run DELPHI training
+```
+./run_DELPHI_training.sh [training_file]
+```
+The `training_file` needs to have the following format. Each protein needs to have three lines: 1. P_id. 2: P_sequeuce. 3: P_label(1: positibe, 0: negative)
+
+6. To run DELPHI predicting
+```
+./run_DELPHI.sh [testing_file]
+```
+The `testing_file` needs to have the following format. Each protein needs to have two lines: 1. P_id. 2: P_sequeuce.
+The program parameters can be seen by 
+```
+python3 train.py -h
+```
