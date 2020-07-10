@@ -48,7 +48,10 @@ mkdir -p ../programs && cd ../program
  
  - install [ANCHOR](http://anchor.elte.hu/Downloads.php)
  
-4. Modify the `env_setup.sh`. Change the path according to your environment.
+4. Modify the `env_setup.sh`. Change the path according to your environment. Then
+```
+source env_setup.sh
+```
 
 5. To run DELPHI training
 ```
