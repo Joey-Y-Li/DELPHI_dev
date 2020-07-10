@@ -1,4 +1,4 @@
-# The source code of DELPHI web server
+# The source code of DELPHI (the development version)
 The DELPHI source code is designed for high-throughput prediction. It does not have the limitation of 10 sequences per run. We recommend to use the [web version](https://www.csd.uwo.ca/~yli922/index.php) of DELPHI if you input is small.
 # system requirement
 DELPHI is developed under Linux environment with python 3.5.
