@@ -15,7 +15,7 @@ do
 	if [ ! -f "$pssm_f" ]; then
 	echo "${pssm_f} doesn't exist, compute it"
     # cat ${filename} >> /project/ctb-ilie/yli922/pssm/dataset/survey_train_Pid_and_Pseq_2kleft.txt
-    psiblast -query $filename -db ${PRO_DIR}/../blastDB/nr -num_threads 5 -out_ascii_pssm ${pssm_f} -num_iterations 3
+    psiblast -query $filename -db ${blast_nr_db} 5 -out_ascii_pssm ${pssm_f} -num_iterations 3
 	else
 		echo "${pssm_f} already exist"
 	fi

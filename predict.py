@@ -378,10 +378,6 @@ def main():
     Predict(args, test_all_features_np3D)
     log_time("Program ended")
 
-CUR_DIR = os.path.dirname(os.path.realpath(__file__)) + "/"
-
-# a dictionary that stores <3mer, np of shape (1,1,100)>
-Dict_3mer_to_100vec = {}
 ECO_test_dic = {}
 RAA_test_dic = {}
 RSA_test_dic = {}

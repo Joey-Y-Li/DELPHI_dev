@@ -1,5 +1,5 @@
 #!/bin/bash
-SPRINT_program=${PRO_DIR}/../programs/SPRINT/bin/compute_HSPs
+SPRINT_program=compute_HSPs
 SPRINT_DB=${PRO_DIR}/feature_computation/HSP/SPRING_DB_14836_Pid_and_Pseq.txt
 SPRINT_train_pid_pseq_label=${PRO_DIR}/feature_computation/HSP/SPRING_DB_14836_Pid_and_Pseq_label.txt
 compute="python3 ${PRO_DIR}/feature_computation/HSP/compute.py"
