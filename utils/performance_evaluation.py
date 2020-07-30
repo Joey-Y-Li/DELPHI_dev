@@ -45,6 +45,7 @@ def PlotRocAndPRCurvesAndMetrics(truth, pred, args_prefix, csvPre=""):
     sorted_pred_descending = np.flip(sorted_pred)  # from big to small
     num_of_1 = np.count_nonzero(truth)
     threshold = sorted_pred_descending.item(num_of_1 - 1)
+    print("threshold: ",threshold)
     pred_binary = np.where(pred >= threshold, 1, 0)
     TP, FP, TN, FN, sensitivity, specificity, recall, precision, MCC, F1_score, accuracy = CalculateEvaluationMetrics(truth, pred_binary)
     PrintToCSV(csvPre + args_prefix, au_roc, aupr, TP, FP, TN, FN, sensitivity, specificity, recall, precision, MCC,

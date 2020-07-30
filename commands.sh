@@ -36,7 +36,8 @@ cd /work2/DELPHI_Server/PSSM_database/PSSMs
 python3 /work2/DELPHI_Server/Src/utils/build_PSSM_DB.py /work2/DELPHI_Server/PSSM_database/PSSMs/ 
 
 # performance evaluation
-python3 /work2/DELPHI_Server/Src/utils/performance_evaluation.py out_DS72 dataset/DS_72_Pid_Pseq_label.txt ds72_delphi_cpu_server
+python3 /work2/DELPHI_Server/Src/utils/performance_evaluation.py prediction_results/DS448/DELPHI dataset/DS_448_Pid_Pseq_label.txt ds448_DELPHI
+python3 /work2/DELPHI_Server/Src/utils/performance_evaluation.py prediction_results/DS448/SCRIBER dataset/DS_448_Pid_Pseq_label.txt ds448_SCRIBER
 
 
 

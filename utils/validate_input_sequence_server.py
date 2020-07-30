@@ -28,6 +28,12 @@ def check(seq_fn):
             exit(1)
             num_output_seq += 1
     fin.close()
+    if (num_ori_seq < 1):
+        print ("[Input sequence error:] Each sequence must have two lines: 1. >Protein_id 2. Protein_sequence")
+        exit(1)
+    if (num_ori_seq > 10):
+        print ("[Input sequence error:] The max number of input sequences is 10")
+        eit(1)
 
 def main():
     input_fn = sys.argv[1]
